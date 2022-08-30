@@ -26,10 +26,10 @@ oc -n ns1 get servicemonitor
 oc apply -f example-app-pod-monitor.yaml </br>
 oc -n ns1 get podmonitor
 ### Enable Monitoring  
-// Add data.config.yaml. enableUserWorkload: true </br>  
-oc -n openshift-monitoring edit configmap cluster-monitoring-config </br>
-// OR if there is no ConfigMap </br>
-oc -f apply cluster-monitoring-config.yaml </br>
-// Check that the prometheus-operator, prometheus-user-workload and thanos-ruler-user-workload pods are running in the openshift-user-workload-monitoring project. It might take a short while for the pods to start:</br>
+// Add data.config.yaml. enableUserWorkload: true </br></i>
+oc -n openshift-monitoring edit configmap cluster-monitoring-config </br></br>
+// OR if there is no ConfigMap </br></i>
+oc -f apply cluster-monitoring-config.yaml </br></br>
+// Check that the prometheus-operator, prometheus-user-workload and thanos-ruler-user-workload pods are running in the openshift-user-workload-monitoring project. It might take a short while for the pods to start:</br></i>
 oc -n openshift-user-workload-monitoring get pod
 
