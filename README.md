@@ -9,12 +9,12 @@ https://docs.openshift.com/container-platform/4.10/monitoring/enabling-monitorin
 ### Openshift Console UI 
 https://github.com/zhuje/console
 
-# Script 
+# TODO Script -- NOT TESTED  
 To run on MAC </br>
-// change permissions
-chmod +x start.sh 
-// run script 
-./start.sh 
+// change permissions </br>
+chmod +x start.sh </br>
+// run script </br>
+./start.sh </br>
 
 
 # CLI 
