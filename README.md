@@ -21,6 +21,6 @@ oc -n ns1 get podmonitor
 ### Enable Monitoring  
 oc -n openshift-monitoring edit configmap cluster-monitoring-config
 
-# Check that the prometheus-operator, prometheus-user-workload and thanos-ruler-user-workload pods are running in the openshift-user-workload-monitoring project. It might take a short while for the pods to start:
+### Check that the prometheus-operator, prometheus-user-workload and thanos-ruler-user-workload pods are running in the openshift-user-workload-monitoring project. It might take a short while for the pods to start:
 oc -n openshift-user-workload-monitoring get pod
 
