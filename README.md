@@ -10,17 +10,21 @@ https://docs.openshift.com/container-platform/4.10/monitoring/enabling-monitorin
 
 # CLI 
 ### Deploy Pod 
-oc apply -f prometheus-example-app.yaml
+oc apply -f prometheus-example-app.yaml </br>
 oc -n ns1 get pod
 ### Deploy ServiceMonitor 
-oc apply -f example-app-service-monitor.yaml
+oc apply -f example-app-service-monitor.yaml </br>
 oc -n ns1 get servicemonitor
 ### Deploy PodMonitor 
-oc apply -f example-app-pod-monitor.yaml
+oc apply -f example-app-pod-monitor.yaml </br>
 oc -n ns1 get podmonitor
 ### Enable Monitoring  
-oc -n openshift-monitoring edit configmap cluster-monitoring-config
+// Add data.config.yaml. enableUserWorkload: true </br>  
+oc -n openshift-monitoring edit configmap cluster-monitoring-config </br>
+OR if there is no ConfigMap </br>
+oc -f apply cluster-monitoring-config.yaml </br>
 
-### Check that the prometheus-operator, prometheus-user-workload and thanos-ruler-user-workload pods are running in the openshift-user-workload-monitoring project. It might take a short while for the pods to start:
+
+### Check that the prometheus-operator, prometheus-user-workload and thanos-ruler-user-workload pods are running in the openshift-user-workload-monitoring project. It might take a short while for the pods to start:</br>
 oc -n openshift-user-workload-monitoring get pod
 
