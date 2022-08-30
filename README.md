@@ -26,7 +26,7 @@ oc -n ns1 get servicemonitor
 oc apply -f example-app-pod-monitor.yaml </br>
 oc -n ns1 get podmonitor
 ### Enable Monitoring  
-// Add data.config.yaml. enableUserWorkload: true </br></i>
+// Add data.config.yaml. enableUserWorkload: true </br></em>
 oc -n openshift-monitoring edit configmap cluster-monitoring-config </br></br>
 // OR if there is no ConfigMap </br></i>
 oc -f apply cluster-monitoring-config.yaml </br></br>
