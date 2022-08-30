@@ -6,6 +6,8 @@ https://github.com/rhobs/prometheus-example-app/blob/master/manifests/pod-monito
 https://doc.crds.dev/github.com/prometheus-operator/prometheus-operator/monitoring.coreos.com/PodMonitor/v1@v0.58.0
 ### Enable Monitoring 
 https://docs.openshift.com/container-platform/4.10/monitoring/enabling-monitoring-for-user-defined-projects.html#enabling-monitoring-for-user-defined-projects
+### Openshift Console UI 
+https://github.com/zhuje/console
 
 # Script 
 To run on MAC </br>
@@ -26,10 +28,10 @@ oc -n ns1 get servicemonitor
 oc apply -f example-app-pod-monitor.yaml </br>
 oc -n ns1 get podmonitor
 ### Enable Monitoring  
-// Add data.config.yaml. enableUserWorkload: true </br></em>
+<i>// Add data.config.yaml. enableUserWorkload: true </br></i>
 oc -n openshift-monitoring edit configmap cluster-monitoring-config </br></br>
-// OR if there is no ConfigMap </br></i>
+<i>// OR if there is no ConfigMap </br></i>
 oc -f apply cluster-monitoring-config.yaml </br></br>
-// Check that the prometheus-operator, prometheus-user-workload and thanos-ruler-user-workload pods are running in the openshift-user-workload-monitoring project. It might take a short while for the pods to start:</br></i>
+<i>// Check that the prometheus-operator, prometheus-user-workload and thanos-ruler-user-workload pods are running in the openshift-user-workload-monitoring project. It might take a short while for the pods to start:</br></i>
 oc -n openshift-user-workload-monitoring get pod
 
