@@ -1,0 +1,5 @@
+prometheus: 
+  prometheusSpec: 
+    podMonitorSelector:
+      matchLabels: 
+        prometheus: "true"

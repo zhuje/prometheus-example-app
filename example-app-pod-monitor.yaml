@@ -6,8 +6,10 @@ metadata:
   name: prometheus-example-podmonitor
   namespace: ns1
 spec:
+  namespaceSelector: {}
   selector:
     matchLabels:
       app: prometheus-example-app
   podMetricsEndpoints:
   - port: web
+    interval: 2s
