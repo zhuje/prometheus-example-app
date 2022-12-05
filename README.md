@@ -16,6 +16,8 @@ chmod +x start.sh </br>
 // run script </br>
 ./start.sh </br>
 
+Updated example deploy of servicemonitors and podmonitors: https://github.com/zhuje/example_deploy_monitors
+
 
 # CLI 
 ### Deploy Pod 
