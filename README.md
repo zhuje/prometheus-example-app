@@ -1,13 +1,6 @@
-# Resources 
-### Deploy Sample Application 
-https://docs.openshift.com/container-platform/4.10/monitoring/managing-metrics.html
-### PodMonitor 
-https://github.com/rhobs/prometheus-example-app/blob/master/manifests/pod-monitor.yaml
-https://doc.crds.dev/github.com/prometheus-operator/prometheus-operator/monitoring.coreos.com/PodMonitor/v1@v0.58.0
-### Enable Monitoring 
-https://docs.openshift.com/container-platform/4.10/monitoring/enabling-monitoring-for-user-defined-projects.html#enabling-monitoring-for-user-defined-projects
-### Openshift Console UI 
-https://github.com/zhuje/console
+# Updated Example: 
+Updated example deploy of servicemonitors and podmonitors: https://github.com/zhuje/example_deploy_monitors
+
 
 # TODO Script -- NOT TESTED  
 To run on MAC </br>
@@ -17,6 +10,7 @@ chmod +x start.sh </br>
 ./start.sh </br>
 
 Updated example deploy of servicemonitors and podmonitors: https://github.com/zhuje/example_deploy_monitors
+
 
 
 # CLI 
@@ -37,3 +31,13 @@ oc -f apply cluster-monitoring-config.yaml </br></br>
 <i>// Check that the prometheus-operator, prometheus-user-workload and thanos-ruler-user-workload pods are running in the openshift-user-workload-monitoring project. It might take a short while for the pods to start:</br></i>
 oc -n openshift-user-workload-monitoring get pod
 
+# Resources 
+### Deploy Sample Application 
+https://docs.openshift.com/container-platform/4.10/monitoring/managing-metrics.html
+### PodMonitor 
+https://github.com/rhobs/prometheus-example-app/blob/master/manifests/pod-monitor.yaml
+https://doc.crds.dev/github.com/prometheus-operator/prometheus-operator/monitoring.coreos.com/PodMonitor/v1@v0.58.0
+### Enable Monitoring 
+https://docs.openshift.com/container-platform/4.10/monitoring/enabling-monitoring-for-user-defined-projects.html#enabling-monitoring-for-user-defined-projects
+### Openshift Console UI 
+https://github.com/zhuje/console
